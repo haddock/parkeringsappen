@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  street: MyString
+  areacode: MyString
+  city: MyString
+  day: MyString
+  starthour: MyString
+  endhour: MyString
+  note: MyString
+
+two:
+  street: MyString
+  areacode: MyString
+  city: MyString
+  day: MyString
+  starthour: MyString
+  endhour: MyString
+  note: MyString
