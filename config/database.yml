@@ -17,8 +17,8 @@ development:
   encoding: unicode
   database: parkeringsappen_development
   pool: 5
-  username: parkeringsappen
-  password:
+  username: postgres
+  password: acRoTiv3
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -44,7 +44,7 @@ test:
   database: parkeringsappen_test
   pool: 5
   username: parkeringsappen
-  password:
+  password: acRoTiv3
 
 production:
   adapter: postgresql
@@ -52,4 +52,4 @@ production:
   database: parkeringsappen_production
   pool: 5
   username: parkeringsappen
-  password:
+  password: acRoTiv3
