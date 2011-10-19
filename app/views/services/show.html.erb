@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Street:</b>
+  <%= @service.street %>
+</p>
+
+<p>
+  <b>Areacode:</b>
+  <%= @service.areacode %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @service.city %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @service.day %>
+</p>
+
+<p>
+  <b>Starthour:</b>
+  <%= @service.starthour %>
+</p>
+
+<p>
+  <b>Endhour:</b>
+  <%= @service.endhour %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @service.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

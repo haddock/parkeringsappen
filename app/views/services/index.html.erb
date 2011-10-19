@@ -1,0 +1,35 @@
+<h1>Listing services</h1>
+
+<table>
+  <tr>
+    <th>Street</th>
+    <th>Areacode</th>
+    <th>City</th>
+    <th>Day</th>
+    <th>Starthour</th>
+    <th>Endhour</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @services.each do |service| %>
+  <tr>
+    <td><%= service.street %></td>
+    <td><%= service.areacode %></td>
+    <td><%= service.city %></td>
+    <td><%= service.day %></td>
+    <td><%= service.starthour %></td>
+    <td><%= service.endhour %></td>
+    <td><%= service.note %></td>
+    <td><%= link_to 'Show', service %></td>
+    <td><%= link_to 'Edit', edit_service_path(service) %></td>
+    <td><%= link_to 'Destroy', service, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Service', new_service_path %>
