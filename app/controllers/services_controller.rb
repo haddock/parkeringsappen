@@ -42,6 +42,17 @@ class ServicesController < ApplicationController
       format.json  { render :json => @services}
     end
   end
+  
+  # GET /services/area
+  # GET /services/area.xml
+  def area
+    @services = Service.find_all_by_areacode(params[:areacode])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json  { render :json => @services }
+    end
+  end
 
   # GET /services/1/edit
   def edit

@@ -14,6 +14,7 @@ Parkeringsappen::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
   match 'services/street/:street' => 'services#street'
+  match 'services/area/:areacode' => 'services#area'
   match 'home/upload' => 'home#upload'
   
   # Sample resource route (maps HTTP verbs to controller actions automatically):
