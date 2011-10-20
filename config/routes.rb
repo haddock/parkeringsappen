@@ -1,4 +1,6 @@
 Parkeringsappen::Application.routes.draw do
+  get "home/index"
+
   resources :services
 
   # The priority is based upon order of creation:
@@ -11,7 +13,9 @@ Parkeringsappen::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-
+  match 'services/street/:street' => 'services#street'
+  match 'home/upload' => 'home#upload'
+  
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -51,6 +55,7 @@ Parkeringsappen::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

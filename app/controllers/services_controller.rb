@@ -31,6 +31,17 @@ class ServicesController < ApplicationController
       format.json { render json: @service }
     end
   end
+  
+  # GET /services/street
+  # GET /services/street.xml
+  def street
+    @services = Service.find_all_by_street(params[:street])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json  { render :json => @services}
+    end
+  end
 
   # GET /services/1/edit
   def edit
