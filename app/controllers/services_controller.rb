@@ -32,8 +32,23 @@ class ServicesController < ApplicationController
     end
   end
   
-  # GET /services/street
-  # GET /services/street.xml
+  # GET /streets
+  # GET /streets.xml
+  def streets
+    @services = Service.select("distinct(street)")
+
+    if !@services.any?
+      raise ActionController::RoutingError.new('Not Found')
+    else    
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json  { render :json => @services}
+      end
+    end
+  end
+  
+  # GET /street
+  # GET /street.xml
   def street
     @services = Service.find_all_by_street(params[:street])
 
@@ -47,8 +62,24 @@ class ServicesController < ApplicationController
     end
   end
   
-  # GET /services/area
-  # GET /services/area.xml
+  # GET /areas
+  # GET /areas.xml
+  def areas
+    @services = Service.select("distinct(areacode)")
+    
+    if !@services.any?
+      raise ActionController::RoutingError.new('Not Found')
+    else
+      
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json  { render :json => @services }
+      end
+    end
+  end
+  
+  # GET /area
+  # GET /area.xml
   def area
     @services = Service.find_all_by_areacode(params[:areacode])
     

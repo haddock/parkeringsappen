@@ -13,8 +13,10 @@ Parkeringsappen::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-  match 'services/street/:street' => 'services#street', :defaults => { :format => 'json' }
-  match 'services/area/:areacode' => 'services#area', :defaults => { :format => 'json' }
+  match 'street/:street' => 'services#street', :defaults => { :format => 'json' }
+  match 'streets' => 'services#streets', :defaults => { :format => 'json' }
+  match 'area/:areacode' => 'services#area', :defaults => { :format => 'json' }
+  match 'areas' => 'services#areas', :defaults => { :format => 'json' }
   match 'home/upload' => 'home#upload'
   
   # Sample resource route (maps HTTP verbs to controller actions automatically):
