@@ -51,10 +51,15 @@ class ServicesController < ApplicationController
   # GET /services/area.xml
   def area
     @services = Service.find_all_by_areacode(params[:areacode])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json  { render :json => @services }
+    
+    if !@services.any?
+      raise ActionController::RoutingError.new('Not Found')
+    else
+      
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json  { render :json => @services }
+      end
     end
   end
 
