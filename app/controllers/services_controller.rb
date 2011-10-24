@@ -37,9 +37,13 @@ class ServicesController < ApplicationController
   def street
     @services = Service.find_all_by_street(params[:street])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json  { render :json => @services}
+    if !@services.any?
+      raise ActionController::RoutingError.new('Not Found')
+    else    
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json  { render :json => @services}
+      end
     end
   end
   
