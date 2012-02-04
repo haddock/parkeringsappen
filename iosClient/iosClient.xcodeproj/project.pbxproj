@@ -20,6 +20,9 @@
 		4D579A4114DD3A84000F5910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D579A2214DD3A84000F5910 /* Foundation.framework */; };
 		4D579A4914DD3A84000F5910 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D579A4714DD3A84000F5910 /* InfoPlist.strings */; };
 		4D579A4C14DD3A84000F5910 /* iosClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A4B14DD3A84000F5910 /* iosClientTests.m */; };
+		4D579A5F14DD3D2C000F5910 /* masterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A5E14DD3D2C000F5910 /* masterTableViewController.m */; };
+		4D579A6214DD3DC3000F5910 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A6114DD3DC3000F5910 /* detailViewController.m */; };
+		4D579A6814DD3EBC000F5910 /* street.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A6714DD3EBC000F5910 /* street.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,12 @@
 		4D579A4814DD3A84000F5910 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D579A4A14DD3A84000F5910 /* iosClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iosClientTests.h; sourceTree = "<group>"; };
 		4D579A4B14DD3A84000F5910 /* iosClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosClientTests.m; sourceTree = "<group>"; };
+		4D579A5D14DD3D2C000F5910 /* masterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = masterTableViewController.h; sourceTree = "<group>"; };
+		4D579A5E14DD3D2C000F5910 /* masterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = masterTableViewController.m; sourceTree = "<group>"; };
+		4D579A6014DD3DC3000F5910 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
+		4D579A6114DD3DC3000F5910 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
+		4D579A6614DD3EBC000F5910 /* street.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = street.h; path = ../street.h; sourceTree = "<group>"; };
+		4D579A6714DD3EBC000F5910 /* street.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = street.m; path = ../street.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +123,12 @@
 				4D579A2F14DD3A84000F5910 /* AppDelegate.h */,
 				4D579A3014DD3A84000F5910 /* AppDelegate.m */,
 				4D579A3214DD3A84000F5910 /* MainStoryboard.storyboard */,
+				4D579A5D14DD3D2C000F5910 /* masterTableViewController.h */,
+				4D579A5E14DD3D2C000F5910 /* masterTableViewController.m */,
+				4D579A6014DD3DC3000F5910 /* detailViewController.h */,
+				4D579A6114DD3DC3000F5910 /* detailViewController.m */,
+				4D579A6614DD3EBC000F5910 /* street.h */,
+				4D579A6714DD3EBC000F5910 /* street.m */,
 				4D579A3514DD3A84000F5910 /* ViewController.h */,
 				4D579A3614DD3A84000F5910 /* ViewController.m */,
 				4D579A2714DD3A84000F5910 /* Supporting Files */,
@@ -261,6 +276,9 @@
 				4D579A2D14DD3A84000F5910 /* main.m in Sources */,
 				4D579A3114DD3A84000F5910 /* AppDelegate.m in Sources */,
 				4D579A3714DD3A84000F5910 /* ViewController.m in Sources */,
+				4D579A5F14DD3D2C000F5910 /* masterTableViewController.m in Sources */,
+				4D579A6214DD3DC3000F5910 /* detailViewController.m in Sources */,
+				4D579A6814DD3EBC000F5910 /* street.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +448,7 @@
 				4D579A5114DD3A84000F5910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D579A5214DD3A84000F5910 /* Build configuration list for PBXNativeTarget "iosClientTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +457,7 @@
 				4D579A5414DD3A84000F5910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
