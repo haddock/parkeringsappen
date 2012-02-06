@@ -80,8 +80,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="cpE-Ye-bej">
-                                <rect key="frame" x="20" y="292" width="280" height="104"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="notes" textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="8" id="cpE-Ye-bej">
+                                <rect key="frame" x="20" y="292" width="280" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -128,6 +128,7 @@
                 <relationship kind="outlet" name="areacodeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dayLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="endLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="startLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="streetLabel" candidateClass="UILabel"/>
             </relationships>
