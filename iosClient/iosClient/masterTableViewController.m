@@ -8,7 +8,11 @@
 
 #import "masterTableViewController.h"
 #import "detailViewController.h"
-#import "Street.h"
+#import "Service.h"
+
+@interface masterTableViewController ()
+-(void) loadServices;
+@end
 
 @interface masterTableViewController () {
 @private
@@ -42,22 +46,39 @@
 {
     [super viewDidLoad];
     
-    Street *st1 = [[Street alloc] init];
-    st1.name = @"Bergsgatan";
-    st1.details = @"Måndag 0-6";
-    
-    Street *st2 = [[Street alloc] init];
-    st2.name = @"Kaplansbacken";
-    st2.details = @"Tisdag 0-6";
-    
-    
-    streets = [NSArray arrayWithObjects:st1, st2, nil];
-    
+    [self loadServices];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)loadServices
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *textFilePath = [bundle pathForResource:@"serviceinfo" ofType:@"csv"];
+    NSString *fileData = [NSString stringWithContentsOfFile:textFilePath encoding:NSUTF8StringEncoding error:nil];
+    
+    NSArray *servicesRaw = [[NSArray alloc] initWithArray:[fileData componentsSeparatedByString:@"\n"]];
+    
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    
+    for (NSString *service in servicesRaw) {
+        NSArray *serviceData = [[NSArray alloc] initWithArray:[service componentsSeparatedByString:@"|"]];
+        Service *tmpService = [[Service alloc] init];
+        tmpService.street = [serviceData objectAtIndex:0];
+        tmpService.serviceDay = [serviceData objectAtIndex:1];
+        NSArray *hours = [[NSArray alloc] initWithArray:[[serviceData objectAtIndex:2] componentsSeparatedByString:@"-"]];
+        tmpService.starthour = [hours objectAtIndex:0];
+        tmpService.endhour = [hours objectAtIndex:1];
+        tmpService.areacode = [serviceData objectAtIndex:3];
+        if (serviceData.count == 6)
+            tmpService.note = [serviceData objectAtIndex:5];
+        [result addObject:tmpService];
+    }
+    
+    streets = [NSArray arrayWithArray:result];    
 }
 
 - (void)viewDidUnload
@@ -126,8 +147,8 @@
     }
     
     // Configure the cell...
-    Street *strt = [streets objectAtIndex:indexPath.row];
-    [cell.textLabel setText: [strt name]];
+    Service *strt = [streets objectAtIndex:indexPath.row];
+    [cell.textLabel setText: [strt street]];
     
     return cell;
 }

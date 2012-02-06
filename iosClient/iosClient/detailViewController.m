@@ -7,7 +7,7 @@
 //
 
 #import "detailViewController.h"
-#import "street.h"
+#import "Service.h"
 
 @interface detailViewController()
 -(void) configureView;
@@ -15,7 +15,12 @@
 
 @implementation detailViewController
 
-@synthesize label = _label;
+@synthesize streetLabel = _streetLabel;
+@synthesize areacodeLabel = _areacodeLabel;
+@synthesize dayLabel = _dayLabel;
+@synthesize startLabel = _startLabel;
+@synthesize endLabel = _endLabel;
+@synthesize notesLabel = _notesLabel;
 @synthesize detailItem = _detailItem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -54,7 +59,12 @@
 
 - (void)viewDidUnload
 {
-    [self setLabel:nil];
+    [self setStreetLabel:nil];
+    [self setAreacodeLabel:nil];
+    [self setDayLabel:nil];
+    [self setStartLabel:nil];
+    [self setEndLabel:nil];
+    [self setNotesLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -76,7 +86,12 @@
 
 - (void)configureView
 {
-    [_label setText:[_detailItem details]];
+    _streetLabel.text = [_detailItem street];
+    _areacodeLabel.text = [_detailItem areacode];
+    _dayLabel.text = [_detailItem serviceDay];
+    _startLabel.text = [_detailItem starthour];
+    _endLabel.text = [_detailItem endhour];
+    _notesLabel.text = [_detailItem note];
 }
 
 @end

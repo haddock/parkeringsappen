@@ -22,7 +22,8 @@
 		4D579A4C14DD3A84000F5910 /* iosClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A4B14DD3A84000F5910 /* iosClientTests.m */; };
 		4D579A5F14DD3D2C000F5910 /* masterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A5E14DD3D2C000F5910 /* masterTableViewController.m */; };
 		4D579A6214DD3DC3000F5910 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A6114DD3DC3000F5910 /* detailViewController.m */; };
-		4D579A6814DD3EBC000F5910 /* street.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A6714DD3EBC000F5910 /* street.m */; };
+		4DDEE9E114E005830091CF48 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDEE9E014E005830091CF48 /* Service.m */; };
+		4DDEE9E314E008EE0091CF48 /* serviceinfo.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4DDEE9E214E008EE0091CF48 /* serviceinfo.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +60,9 @@
 		4D579A5E14DD3D2C000F5910 /* masterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = masterTableViewController.m; sourceTree = "<group>"; };
 		4D579A6014DD3DC3000F5910 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		4D579A6114DD3DC3000F5910 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
-		4D579A6614DD3EBC000F5910 /* street.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = street.h; path = ../street.h; sourceTree = "<group>"; };
-		4D579A6714DD3EBC000F5910 /* street.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = street.m; path = ../street.m; sourceTree = "<group>"; };
+		4DDEE9DF14E005830091CF48 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		4DDEE9E014E005830091CF48 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		4DDEE9E214E008EE0091CF48 /* serviceinfo.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = serviceinfo.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +129,10 @@
 				4D579A5E14DD3D2C000F5910 /* masterTableViewController.m */,
 				4D579A6014DD3DC3000F5910 /* detailViewController.h */,
 				4D579A6114DD3DC3000F5910 /* detailViewController.m */,
-				4D579A6614DD3EBC000F5910 /* street.h */,
-				4D579A6714DD3EBC000F5910 /* street.m */,
 				4D579A3514DD3A84000F5910 /* ViewController.h */,
 				4D579A3614DD3A84000F5910 /* ViewController.m */,
+				4DDEE9DF14E005830091CF48 /* Service.h */,
+				4DDEE9E014E005830091CF48 /* Service.m */,
 				4D579A2714DD3A84000F5910 /* Supporting Files */,
 			);
 			path = iosClient;
@@ -139,6 +141,7 @@
 		4D579A2714DD3A84000F5910 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4DDEE9E214E008EE0091CF48 /* serviceinfo.csv */,
 				4D579A2814DD3A84000F5910 /* iosClient-Info.plist */,
 				4D579A2914DD3A84000F5910 /* InfoPlist.strings */,
 				4D579A2C14DD3A84000F5910 /* main.m */,
@@ -239,6 +242,7 @@
 			files = (
 				4D579A2B14DD3A84000F5910 /* InfoPlist.strings in Resources */,
 				4D579A3414DD3A84000F5910 /* MainStoryboard.storyboard in Resources */,
+				4DDEE9E314E008EE0091CF48 /* serviceinfo.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +282,7 @@
 				4D579A3714DD3A84000F5910 /* ViewController.m in Sources */,
 				4D579A5F14DD3D2C000F5910 /* masterTableViewController.m in Sources */,
 				4D579A6214DD3DC3000F5910 /* detailViewController.m in Sources */,
-				4D579A6814DD3EBC000F5910 /* street.m in Sources */,
+				4DDEE9E114E005830091CF48 /* Service.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

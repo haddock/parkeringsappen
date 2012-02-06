@@ -45,8 +45,43 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Detaljerad info om gatan" lineBreakMode="tailTruncation" minimumFontSize="10" id="peR-UI-w7o">
-                                <rect key="frame" x="67" y="68" width="187" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="street" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="JLd-Yw-0qK">
+                                <rect key="frame" x="20" y="20" width="280" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="areacode" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="mkh-DC-lOv">
+                                <rect key="frame" x="20" y="96" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="day" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="ya1-Qc-9ms">
+                                <rect key="frame" x="20" y="152" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="starthour" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="XvN-7B-7Vx">
+                                <rect key="frame" x="72" y="197" width="76" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="endhour" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="t4G-Rx-ZCH">
+                                <rect key="frame" x="172" y="197" width="76" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="cpE-Ye-bej">
+                                <rect key="frame" x="20" y="292" width="280" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -55,9 +90,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="gatan" id="vUd-mn-f2R"/>
+                    <navigationItem key="navigationItem" id="vUd-mn-f2R"/>
                     <connections>
-                        <outlet property="label" destination="peR-UI-w7o" id="6Eo-CY-QXl"/>
+                        <outlet property="areacodeLabel" destination="mkh-DC-lOv" id="aUs-22-fCL"/>
+                        <outlet property="dayLabel" destination="ya1-Qc-9ms" id="Ube-fW-O0u"/>
+                        <outlet property="endLabel" destination="t4G-Rx-ZCH" id="LD2-5C-dJJ"/>
+                        <outlet property="notesLabel" destination="cpE-Ye-bej" id="15j-SA-fKZ"/>
+                        <outlet property="startLabel" destination="XvN-7B-7Vx" id="aTT-R0-FiY"/>
+                        <outlet property="streetLabel" destination="JLd-Yw-0qK" id="CoQ-4x-QTE"/>
                     </connections>
                 </viewController>
             </objects>
@@ -85,7 +125,11 @@
         <class className="detailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/detailViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="areacodeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dayLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="endLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="startLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="streetLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="masterTableViewController" superclassName="UITableViewController">
