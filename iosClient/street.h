@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface street : NSObject
+@interface Street : NSObject
+
+@property (nonatomic, copy) NSString* name;
+@property (nonatomic, copy) NSString* details;
 
 @end

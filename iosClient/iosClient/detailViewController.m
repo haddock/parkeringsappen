@@ -7,8 +7,16 @@
 //
 
 #import "detailViewController.h"
+#import "street.h"
+
+@interface detailViewController()
+-(void) configureView;
+@end
 
 @implementation detailViewController
+
+@synthesize label = _label;
+@synthesize detailItem = _detailItem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,16 +44,17 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureView];
 }
-*/
 
 - (void)viewDidUnload
 {
+    [self setLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -55,6 +64,19 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)setDetailItem:(id)newDetailItem
+{
+    if (_detailItem != newDetailItem) {
+        _detailItem = newDetailItem;
+        [self configureView];
+    }
+}
+
+- (void)configureView
+{
+    [_label setText:[_detailItem details]];
 }
 
 @end

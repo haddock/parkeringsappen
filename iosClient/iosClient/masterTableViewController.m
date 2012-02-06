@@ -8,6 +8,7 @@
 
 #import "masterTableViewController.h"
 #import "detailViewController.h"
+#import "Street.h"
 
 @interface masterTableViewController () {
 @private
@@ -41,8 +42,17 @@
 {
     [super viewDidLoad];
     
-    streets = [NSArray arrayWithObjects:@"Bergsgatan", @"Kaplansbacken", nil];
-
+    Street *st1 = [[Street alloc] init];
+    st1.name = @"Bergsgatan";
+    st1.details = @"Måndag 0-6";
+    
+    Street *st2 = [[Street alloc] init];
+    st2.name = @"Kaplansbacken";
+    st2.details = @"Tisdag 0-6";
+    
+    
+    streets = [NSArray arrayWithObjects:st1, st2, nil];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -83,6 +93,15 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"ShowStreetDetails"]) {
+        detailViewController* detail = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        [detail setDetailItem:[streets objectAtIndex:indexPath.row]];
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -107,7 +126,8 @@
     }
     
     // Configure the cell...
-    [cell.textLabel setText: [streets objectAtIndex:indexPath.row]];
+    Street *strt = [streets objectAtIndex:indexPath.row];
+    [cell.textLabel setText: [strt name]];
     
     return cell;
 }
@@ -151,17 +171,5 @@
 }
 */
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 @end

@@ -6,8 +6,11 @@
 //  Copyright (c) 2012 Valtech. All rights reserved.
 //
 
-#import "street.h"
+#import "Street.h"
 
-@implementation street
+@implementation Street
+
+@synthesize name = _name;
+@synthesize details = _details;
 
 @end
