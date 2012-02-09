@@ -8,6 +8,7 @@
 
 #import "detailViewController.h"
 #import "Service.h"
+#import "DateCalculator.h"
 
 @interface detailViewController()
 -(void) configureView;
@@ -88,10 +89,20 @@
 {
     _streetLabel.text = [_detailItem street];
     _areacodeLabel.text = [_detailItem areacode];
-    _dayLabel.text = [_detailItem serviceDay];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    int serviceDay = [[_detailItem serviceDay] intValue];
+    _dayLabel.text = [[formatter weekdaySymbols] objectAtIndex:serviceDay];
     _startLabel.text = [_detailItem starthour];
     _endLabel.text = [_detailItem endhour];
-    _notesLabel.text = [_detailItem note];
+    //_notesLabel.text = [_detailItem note];
+    
+    NSString* nextService = [[_detailItem nextServiceStart] description];
+    nextService = [nextService stringByAppendingString:@" - "];
+    nextService = [nextService stringByAppendingString:[[_detailItem nextServiceEnd] description]];
+    _notesLabel.text = nextService;
+    
+    
+
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D427CF914E15541002DFE88 /* DateCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D427CF814E15541002DFE88 /* DateCalculator.m */; };
 		4D579A2114DD3A84000F5910 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D579A2014DD3A84000F5910 /* UIKit.framework */; };
 		4D579A2314DD3A84000F5910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D579A2214DD3A84000F5910 /* Foundation.framework */; };
 		4D579A2514DD3A84000F5910 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D579A2414DD3A84000F5910 /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D427CF714E15541002DFE88 /* DateCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCalculator.h; sourceTree = "<group>"; };
+		4D427CF814E15541002DFE88 /* DateCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCalculator.m; sourceTree = "<group>"; };
 		4D579A1C14DD3A84000F5910 /* iosClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D579A2014DD3A84000F5910 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4D579A2214DD3A84000F5910 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -133,6 +136,8 @@
 				4D579A3614DD3A84000F5910 /* ViewController.m */,
 				4DDEE9DF14E005830091CF48 /* Service.h */,
 				4DDEE9E014E005830091CF48 /* Service.m */,
+				4D427CF714E15541002DFE88 /* DateCalculator.h */,
+				4D427CF814E15541002DFE88 /* DateCalculator.m */,
 				4D579A2714DD3A84000F5910 /* Supporting Files */,
 			);
 			path = iosClient;
@@ -283,6 +288,7 @@
 				4D579A5F14DD3D2C000F5910 /* masterTableViewController.m in Sources */,
 				4D579A6214DD3DC3000F5910 /* detailViewController.m in Sources */,
 				4DDEE9E114E005830091CF48 /* Service.m in Sources */,
+				4D427CF914E15541002DFE88 /* DateCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

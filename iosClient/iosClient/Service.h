@@ -18,4 +18,7 @@
 @property (nonatomic, copy) NSString* endhour;
 @property (nonatomic, copy) NSString* note;
 
+-(NSDate*)nextServiceStart;
+-(NSDate*)nextServiceEnd;
+
 @end

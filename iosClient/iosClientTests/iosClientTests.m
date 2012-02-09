@@ -7,6 +7,7 @@
 //
 
 #import "iosClientTests.h"
+#import "DateCalculator.h"
 
 @implementation iosClientTests
 
@@ -22,11 +23,6 @@
     // Tear-down code here.
     
     [super tearDown];
-}
-
-- (void)testExample
-{
-    STAssertTrue(YES, @"sant");
 }
 
 @end
