@@ -13,15 +13,17 @@
 +(NSDate*)nextDateByWeekday:(int)targetWeekday {
     NSDate *today = [[NSDate alloc] init];
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    [gregorian setTimeZone:[NSTimeZone localTimeZone]];
     
     NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:today];
-    int currentWeekday = [comps weekday] - 1;
+    int currentWeekday = [comps weekday];
     
-    [comps setWeekday:targetWeekday - 2];
+    int daysToAdd = targetWeekday - currentWeekday;
     
-    if (currentWeekday >= targetWeekday) {
-        [comps setWeek:1];
-    }
+    if (daysToAdd < 0)
+        daysToAdd = daysToAdd + 7;
+    
+    [comps setDay: daysToAdd - 2];
     
     NSDate *result = [gregorian dateByAddingComponents:comps toDate:today options:0];
     return result;

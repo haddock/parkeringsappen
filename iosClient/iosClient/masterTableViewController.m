@@ -17,6 +17,8 @@
 @interface masterTableViewController () {
 @private
     NSArray* streets;
+    CLGeocoder* geocoder;
+    CLLocationManager* locationManager;
 }
 @end
 
@@ -45,7 +47,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    /*
+    locationManager.delegate = self;
+    [locationManager startUpdatingLocation];
     
+    locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    [geocoder reverseGeocodeLocation:locationManager.location completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *placemark = [placemarks objectAtIndex:0];
+        NSLog(@"Location: %@", [placemark description]);
+    }];
+    */
     [self loadServices];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

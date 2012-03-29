@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface masterTableViewController : UITableViewController
+@interface masterTableViewController : UITableViewController <CLLocationManagerDelegate>
 
 @end

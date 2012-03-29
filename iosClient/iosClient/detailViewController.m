@@ -9,6 +9,8 @@
 #import "detailViewController.h"
 #import "Service.h"
 #import "DateCalculator.h"
+#import <EventKit/EventKit.h>
+#import <EventKitUI/EventKitUI.h>
 
 @interface detailViewController()
 -(void) configureView;
@@ -23,6 +25,8 @@
 @synthesize endLabel = _endLabel;
 @synthesize notesLabel = _notesLabel;
 @synthesize detailItem = _detailItem;
+@synthesize statusLabel = _statusLabel;
+@synthesize addToCalendarButton = _addToCalendarButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -66,6 +70,8 @@
     [self setStartLabel:nil];
     [self setEndLabel:nil];
     [self setNotesLabel:nil];
+    [self setStatusLabel:nil];
+    [self setAddToCalendarButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -94,15 +100,35 @@
     _dayLabel.text = [[formatter weekdaySymbols] objectAtIndex:serviceDay];
     _startLabel.text = [_detailItem starthour];
     _endLabel.text = [_detailItem endhour];
-    //_notesLabel.text = [_detailItem note];
+    _notesLabel.text = [_detailItem note];
     
     NSString* nextService = [[_detailItem nextServiceStart] description];
     nextService = [nextService stringByAppendingString:@" - "];
     nextService = [nextService stringByAppendingString:[[_detailItem nextServiceEnd] description]];
-    _notesLabel.text = nextService;
+    _notesLabel.text = nextService;    
     
-    
-
 }
 
+- (IBAction)addToCalendar:(id)sender {
+    
+    EKEventStore *eventDB = [[EKEventStore alloc] init];
+    EKEvent *myEvent  = [EKEvent eventWithEventStore:eventDB];
+    
+    myEvent.title = @"Parkera om bilen!";
+    myEvent.startDate = [_detailItem nextServiceStart];
+    myEvent.endDate = [_detailItem nextServiceEnd];
+    myEvent.allDay = NO;
+    
+    [myEvent setCalendar:[eventDB defaultCalendarForNewEvents]];
+    
+    NSError *err;
+    
+    BOOL success = [eventDB saveEvent:myEvent span:EKSpanThisEvent error:&err]; 
+    
+	if (success) {
+        _statusLabel.text = @"Tillagt i kalendern.";
+        _addToCalendarButton.enabled = FALSE;
+    }
+
+}
 @end

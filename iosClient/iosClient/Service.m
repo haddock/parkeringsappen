@@ -43,7 +43,7 @@
     NSDate* date = [DateCalculator nextDateByWeekday:[serviceDay intValue]];
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *comps = [gregorian components:NSMinuteCalendarUnit fromDate:date];
-    
+        
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy"];
     [comps setYear:[[dateFormatter stringFromDate:date] intValue]];

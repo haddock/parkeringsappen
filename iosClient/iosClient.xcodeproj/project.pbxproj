@@ -23,8 +23,14 @@
 		4D579A4C14DD3A84000F5910 /* iosClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A4B14DD3A84000F5910 /* iosClientTests.m */; };
 		4D579A5F14DD3D2C000F5910 /* masterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A5E14DD3D2C000F5910 /* masterTableViewController.m */; };
 		4D579A6214DD3DC3000F5910 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D579A6114DD3DC3000F5910 /* detailViewController.m */; };
+		4D79524C14E50C9200C6FA8F /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE69A2114E50221004A0932 /* EventKit.framework */; };
+		4D79524D14E50C9200C6FA8F /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE69A2414E5061C004A0932 /* EventKitUI.framework */; };
+		4DA520E614F90439006137B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA520E514F90439006137B5 /* CoreLocation.framework */; };
 		4DDEE9E114E005830091CF48 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDEE9E014E005830091CF48 /* Service.m */; };
 		4DDEE9E314E008EE0091CF48 /* serviceinfo.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4DDEE9E214E008EE0091CF48 /* serviceinfo.csv */; };
+		4DDF9E39151374AE00014E11 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDF9E38151374AE00014E11 /* MapKit.framework */; };
+		4DE69A2214E50221004A0932 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE69A2114E50221004A0932 /* EventKit.framework */; };
+		4DE69A2514E5061C004A0932 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE69A2414E5061C004A0932 /* EventKitUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +69,13 @@
 		4D579A5E14DD3D2C000F5910 /* masterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = masterTableViewController.m; sourceTree = "<group>"; };
 		4D579A6014DD3DC3000F5910 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		4D579A6114DD3DC3000F5910 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
+		4DA520E514F90439006137B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4DDEE9DF14E005830091CF48 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		4DDEE9E014E005830091CF48 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		4DDEE9E214E008EE0091CF48 /* serviceinfo.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = serviceinfo.csv; sourceTree = "<group>"; };
+		4DDF9E38151374AE00014E11 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4DE69A2114E50221004A0932 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		4DE69A2414E5061C004A0932 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DDF9E39151374AE00014E11 /* MapKit.framework in Frameworks */,
+				4DA520E614F90439006137B5 /* CoreLocation.framework in Frameworks */,
+				4D79524C14E50C9200C6FA8F /* EventKit.framework in Frameworks */,
+				4D79524D14E50C9200C6FA8F /* EventKitUI.framework in Frameworks */,
 				4D579A2114DD3A84000F5910 /* UIKit.framework in Frameworks */,
 				4D579A2314DD3A84000F5910 /* Foundation.framework in Frameworks */,
 				4D579A2514DD3A84000F5910 /* CoreGraphics.framework in Frameworks */,
@@ -86,6 +100,8 @@
 				4D579A3F14DD3A84000F5910 /* SenTestingKit.framework in Frameworks */,
 				4D579A4014DD3A84000F5910 /* UIKit.framework in Frameworks */,
 				4D579A4114DD3A84000F5910 /* Foundation.framework in Frameworks */,
+				4DE69A2214E50221004A0932 /* EventKit.framework in Frameworks */,
+				4DE69A2514E5061C004A0932 /* EventKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +130,10 @@
 		4D579A1F14DD3A84000F5910 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DDF9E38151374AE00014E11 /* MapKit.framework */,
+				4DA520E514F90439006137B5 /* CoreLocation.framework */,
+				4DE69A2414E5061C004A0932 /* EventKitUI.framework */,
+				4DE69A2114E50221004A0932 /* EventKit.framework */,
 				4D579A2014DD3A84000F5910 /* UIKit.framework */,
 				4D579A2214DD3A84000F5910 /* Foundation.framework */,
 				4D579A2414DD3A84000F5910 /* CoreGraphics.framework */,
@@ -130,8 +150,8 @@
 				4D579A3214DD3A84000F5910 /* MainStoryboard.storyboard */,
 				4D579A5D14DD3D2C000F5910 /* masterTableViewController.h */,
 				4D579A5E14DD3D2C000F5910 /* masterTableViewController.m */,
-				4D579A6014DD3DC3000F5910 /* detailViewController.h */,
 				4D579A6114DD3DC3000F5910 /* detailViewController.m */,
+				4D579A6014DD3DC3000F5910 /* detailViewController.h */,
 				4D579A3514DD3A84000F5910 /* ViewController.h */,
 				4D579A3614DD3A84000F5910 /* ViewController.m */,
 				4DDEE9DF14E005830091CF48 /* Service.h */,
@@ -219,7 +239,7 @@
 		4D579A1314DD3A83000F5910 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = Valtech;
 			};
 			buildConfigurationList = 4D579A1614DD3A83000F5910 /* Build configuration list for PBXProject "iosClient" */;
