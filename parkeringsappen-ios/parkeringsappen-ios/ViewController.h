@@ -14,6 +14,8 @@
     CLLocationManager *locationmanager;
     CLGeocoder *geocoder;
 }
-
+- (IBAction)getCurrentStreet:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *getStreetButton;
 @property (weak, nonatomic) IBOutlet UILabel *streetlabel;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @end
