@@ -10,12 +10,22 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController <CLLocationManagerDelegate> {
+
+@interface ViewController : UIViewController <CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource> {
+    
     CLLocationManager *locationmanager;
     CLGeocoder *geocoder;
+    ServicedayProvider *servicedayProvider;
+    NSArray* servicedays;
+    
 }
-- (IBAction)getCurrentStreet:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIButton *getStreetButton;
 @property (weak, nonatomic) IBOutlet UILabel *streetlabel;
+@property (weak, nonatomic) IBOutlet UIPickerView *streetSelector;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
+
+- (IBAction)getCurrentStreet:(id)sender;
+
 @end

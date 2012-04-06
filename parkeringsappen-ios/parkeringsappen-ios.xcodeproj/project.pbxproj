@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1B222E152591630005DCB7 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1B2224152590380005DCB7 /* libRestKit.a */; };
+		4D1B22301525918B0005DCB7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1B222F1525918B0005DCB7 /* CFNetwork.framework */; };
+		4D1B2232152591920005DCB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1B2231152591920005DCB7 /* CoreData.framework */; };
+		4D1B22341525919B0005DCB7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1B22331525919B0005DCB7 /* MobileCoreServices.framework */; };
+		4D1B2236152591A20005DCB7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1B2235152591A20005DCB7 /* Security.framework */; };
+		4D1B2238152591A90005DCB7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1B2237152591A90005DCB7 /* SystemConfiguration.framework */; };
+		4D1B223A152591B90005DCB7 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1B2239152591B90005DCB7 /* libxml2.dylib */; };
+		4D7F950515262D100086CBD7 /* Serviceday.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F950415262D100086CBD7 /* Serviceday.m */; };
+		4D80453A1529B7470025E651 /* ServicedayProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8045391529B7470025E651 /* ServicedayProvider.m */; };
 		4D962CA515249A3F005106AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D962CA415249A3F005106AF /* UIKit.framework */; };
 		4D962CA715249A3F005106AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D962CA615249A3F005106AF /* Foundation.framework */; };
 		4D962CA915249A3F005106AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D962CA815249A3F005106AF /* CoreGraphics.framework */; };
@@ -25,6 +34,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4D1B2223152590380005DCB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1B2219152590370005DCB7 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		4D1B2225152590380005DCB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1B2219152590370005DCB7 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		4D1B2227152590380005DCB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1B2219152590370005DCB7 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		4D1B2229152590380005DCB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1B2219152590370005DCB7 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		4D1B222C152591470005DCB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1B2219152590370005DCB7 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
 		4D962CC615249A3F005106AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D962C9715249A3F005106AF /* Project object */;
@@ -35,6 +79,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1B2219152590370005DCB7 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		4D1B222F1525918B0005DCB7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4D1B2231152591920005DCB7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4D1B22331525919B0005DCB7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4D1B2235152591A20005DCB7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4D1B2237152591A90005DCB7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4D1B2239152591B90005DCB7 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		4D1B223B152591C20005DCB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4D7F950315262D100086CBD7 /* Serviceday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serviceday.h; sourceTree = "<group>"; };
+		4D7F950415262D100086CBD7 /* Serviceday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Serviceday.m; sourceTree = "<group>"; };
+		4D8045381529B7470025E651 /* ServicedayProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicedayProvider.h; sourceTree = "<group>"; };
+		4D8045391529B7470025E651 /* ServicedayProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicedayProvider.m; sourceTree = "<group>"; };
 		4D962CA015249A3F005106AF /* parkeringsappen-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "parkeringsappen-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D962CA415249A3F005106AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4D962CA615249A3F005106AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,6 +119,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1B223A152591B90005DCB7 /* libxml2.dylib in Frameworks */,
+				4D1B2238152591A90005DCB7 /* SystemConfiguration.framework in Frameworks */,
+				4D1B2236152591A20005DCB7 /* Security.framework in Frameworks */,
+				4D1B22341525919B0005DCB7 /* MobileCoreServices.framework in Frameworks */,
+				4D1B2232152591920005DCB7 /* CoreData.framework in Frameworks */,
+				4D1B22301525918B0005DCB7 /* CFNetwork.framework in Frameworks */,
+				4D1B222E152591630005DCB7 /* libRestKit.a in Frameworks */,
 				4D962CDC15249A59005106AF /* MapKit.framework in Frameworks */,
 				4D962CDA15249A51005106AF /* CoreLocation.framework in Frameworks */,
 				4D962CA515249A3F005106AF /* UIKit.framework in Frameworks */,
@@ -84,9 +147,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1B221A152590370005DCB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D1B2224152590380005DCB7 /* libRestKit.a */,
+				4D1B2226152590380005DCB7 /* RestKitTests.octest */,
+				4D1B2228152590380005DCB7 /* RestKit.framework */,
+				4D1B222A152590380005DCB7 /* RestKitFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4D962C9515249A3F005106AF = {
 			isa = PBXGroup;
 			children = (
+				4D1B2219152590370005DCB7 /* RestKit.xcodeproj */,
 				4D962CAA15249A3F005106AF /* parkeringsappen-ios */,
 				4D962CC815249A3F005106AF /* parkeringsappen-iosTests */,
 				4D962CA315249A3F005106AF /* Frameworks */,
@@ -106,6 +181,13 @@
 		4D962CA315249A3F005106AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D1B223B152591C20005DCB7 /* QuartzCore.framework */,
+				4D1B2239152591B90005DCB7 /* libxml2.dylib */,
+				4D1B2237152591A90005DCB7 /* SystemConfiguration.framework */,
+				4D1B2235152591A20005DCB7 /* Security.framework */,
+				4D1B22331525919B0005DCB7 /* MobileCoreServices.framework */,
+				4D1B2231152591920005DCB7 /* CoreData.framework */,
+				4D1B222F1525918B0005DCB7 /* CFNetwork.framework */,
 				4D962CDB15249A59005106AF /* MapKit.framework */,
 				4D962CD915249A51005106AF /* CoreLocation.framework */,
 				4D962CA415249A3F005106AF /* UIKit.framework */,
@@ -124,6 +206,10 @@
 				4D962CB615249A3F005106AF /* MainStoryboard.storyboard */,
 				4D962CB915249A3F005106AF /* ViewController.h */,
 				4D962CBA15249A3F005106AF /* ViewController.m */,
+				4D8045381529B7470025E651 /* ServicedayProvider.h */,
+				4D8045391529B7470025E651 /* ServicedayProvider.m */,
+				4D7F950315262D100086CBD7 /* Serviceday.h */,
+				4D7F950415262D100086CBD7 /* Serviceday.m */,
 				4D962CAB15249A3F005106AF /* Supporting Files */,
 			);
 			path = "parkeringsappen-ios";
@@ -173,6 +259,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4D1B222D152591470005DCB7 /* PBXTargetDependency */,
 			);
 			name = "parkeringsappen-ios";
 			productName = "parkeringsappen-ios";
@@ -217,6 +304,12 @@
 			mainGroup = 4D962C9515249A3F005106AF;
 			productRefGroup = 4D962CA115249A3F005106AF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4D1B221A152590370005DCB7 /* Products */;
+					ProjectRef = 4D1B2219152590370005DCB7 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4D962C9F15249A3F005106AF /* parkeringsappen-ios */,
@@ -224,6 +317,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4D1B2224152590380005DCB7 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 4D1B2223152590380005DCB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1B2226152590380005DCB7 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 4D1B2225152590380005DCB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1B2228152590380005DCB7 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 4D1B2227152590380005DCB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1B222A152590380005DCB7 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 4D1B2229152590380005DCB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4D962C9E15249A3F005106AF /* Resources */ = {
@@ -269,6 +393,8 @@
 				4D962CB115249A3F005106AF /* main.m in Sources */,
 				4D962CB515249A3F005106AF /* AppDelegate.m in Sources */,
 				4D962CBB15249A3F005106AF /* ViewController.m in Sources */,
+				4D7F950515262D100086CBD7 /* Serviceday.m in Sources */,
+				4D80453A1529B7470025E651 /* ServicedayProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +409,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4D1B222D152591470005DCB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 4D1B222C152591470005DCB7 /* PBXContainerItemProxy */;
+		};
 		4D962CC715249A3F005106AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4D962C9F15249A3F005106AF /* parkeringsappen-ios */;
@@ -368,7 +499,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "parkeringsappen-ios/parkeringsappen-ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"/**";
 				INFOPLIST_FILE = "parkeringsappen-ios/parkeringsappen-ios-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -379,7 +512,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "parkeringsappen-ios/parkeringsappen-ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"/**";
 				INFOPLIST_FILE = "parkeringsappen-ios/parkeringsappen-ios-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -438,6 +573,7 @@
 				4D962CD515249A3F005106AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D962CD615249A3F005106AF /* Build configuration list for PBXNativeTarget "parkeringsappen-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +582,7 @@
 				4D962CD815249A3F005106AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
