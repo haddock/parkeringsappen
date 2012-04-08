@@ -41,6 +41,7 @@
         }
         
         nextService = [self setHourOnDate:nextServiceDate hour:[starthour intValue]];
+        dateFormatter = nil;
     }
     
     return nextService;
@@ -70,6 +71,8 @@
     [comps setMinute:0];
     [comps setSecond:0];
     
+    dateFormatter = nil;
+    
     return [gregorian dateFromComponents:comps];
 }
 
@@ -82,7 +85,9 @@
     [dateFormatter setLocale:[NSLocale currentLocale]];
     [dateFormatter setDateFormat:@"eeee yyyy-MM-dd HH:mm"];
 
-    return [dateFormatter stringFromDate:date];
+    NSString* result = [dateFormatter stringFromDate:date];
+    dateFormatter = nil;
+    return result;
 }
 
 
