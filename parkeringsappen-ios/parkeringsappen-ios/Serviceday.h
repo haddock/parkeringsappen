@@ -12,6 +12,11 @@
 
 @property (nonatomic, strong) NSString *street;
 @property (nonatomic, strong) NSString *serviceday;
-@property (nonatomic, strong) NSDate *nextservice;
+@property (nonatomic, strong) NSString *starthour;
+@property (nonatomic, strong) NSString *endhour;
+@property (nonatomic, strong) NSString *note;
+
+- (NSDate*)nextServiceStartDate;
+- (NSDate*)nextServiceEndDate;
 
 @end

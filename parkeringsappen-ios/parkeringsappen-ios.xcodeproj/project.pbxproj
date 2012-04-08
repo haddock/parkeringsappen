@@ -31,6 +31,7 @@
 		4D962CD015249A3F005106AF /* parkeringsappen_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D962CCF15249A3F005106AF /* parkeringsappen_iosTests.m */; };
 		4D962CDA15249A51005106AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D962CD915249A51005106AF /* CoreLocation.framework */; };
 		4D962CDC15249A59005106AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D962CDB15249A59005106AF /* MapKit.framework */; };
+		4DCDF8C815317ACC003D28BB /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCDF8C715317ACC003D28BB /* EventKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		4D962CCF15249A3F005106AF /* parkeringsappen_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = parkeringsappen_iosTests.m; sourceTree = "<group>"; };
 		4D962CD915249A51005106AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4D962CDB15249A59005106AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4DCDF8C715317ACC003D28BB /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCDF8C815317ACC003D28BB /* EventKit.framework in Frameworks */,
 				4D1B223A152591B90005DCB7 /* libxml2.dylib in Frameworks */,
 				4D1B2238152591A90005DCB7 /* SystemConfiguration.framework in Frameworks */,
 				4D1B2236152591A20005DCB7 /* Security.framework in Frameworks */,
@@ -161,6 +164,7 @@
 		4D962C9515249A3F005106AF = {
 			isa = PBXGroup;
 			children = (
+				4DCDF8C715317ACC003D28BB /* EventKit.framework */,
 				4D1B2219152590370005DCB7 /* RestKit.xcodeproj */,
 				4D962CAA15249A3F005106AF /* parkeringsappen-ios */,
 				4D962CC815249A3F005106AF /* parkeringsappen-iosTests */,

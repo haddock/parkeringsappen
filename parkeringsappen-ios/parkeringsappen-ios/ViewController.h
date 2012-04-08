@@ -12,20 +12,16 @@
 
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource> {
-    
-    CLLocationManager *locationmanager;
-    CLGeocoder *geocoder;
-    ServicedayProvider *servicedayProvider;
     NSArray* servicedays;
-    
+    Serviceday* selectedServiceDay;
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *getStreetButton;
 @property (weak, nonatomic) IBOutlet UILabel *streetlabel;
 @property (weak, nonatomic) IBOutlet UIPickerView *streetSelector;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UIButton *addToCalendarButton;
+@property (weak, nonatomic) IBOutlet UILabel *dayLabel;
 
-
-- (IBAction)getCurrentStreet:(id)sender;
+- (IBAction)addToCalendar:(id)sender;
 
 @end
